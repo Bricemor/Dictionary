@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "word": "pristupiti",
+        "cyrillic": "приступити",
+        "type": "glagol",
+        "gender": null,
+        "definition": "Prići, ući ili koristiti nešto.",
+        "definitionCyrillic": "Прићи, ући или користити нешто."
+    },
+    {
+        "id": 2,
+        "word": "nesreća",
+        "cyrillic": "несрећа",
+        "type": "imenica",
+        "gender": "ž.r.",
+        "definition": "Neočekivan i neplaniran događaj koji izaziva štetu ili povredu.",
+        "definitionCyrillic": "Неочекиван и непланиран догађај који изазива штету или повреду."
+    },
+    {
+        "id": 3,
+        "word": "smještaj",
+        "cyrillic": "смјештај",
+        "type": "imenica",
+        "gender": "m.r.",
+        "definition": "Mjesto za boravak ili stanovanje, posebno privremeno.",
+        "definitionCyrillic": "Мјесто за боравак или становање, посебно привремено."
+    },
+    {
+        "id": 4,
+        "word": "pratiti",
+        "cyrillic": "пратити",
+        "type": "glagol",
+        "gender": null,
+        "definition": "Ići s nekim ili postojati u isto vrijeme kao nešto.",
+        "definitionCyrillic": "Ићи с неким или постојати у исто вријеме као нешто."
+    },
+    {
+        "id": 5,
+        "word": "prema",
+        "cyrillic": "према",
+        "type": "prijedlog",
+        "gender": null,
+        "definition": "Kako je navedeno ili prijavljeno od strane nekoga ili nečega.",
+        "definitionCyrillic": "Како је наведено или пријављено од стране некога или нечега."
+    },
+    {
+        "id": 6,
+        "word": "račun",
+        "cyrillic": "рачун",
+        "type": "imenica",
+        "gender": "m.r.",
+        "definition": "Zapis ili aranžman s bankom ili uslugom.",
+        "definitionCyrillic": "Запис или аранжман с банком или услугом."
+    }
+]
