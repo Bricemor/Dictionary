@@ -47,12 +47,14 @@ export default function Page() {
 
 
   return (
+    
     <main className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Dizionario</h1>
+      <h1 className="text-3xl font-bold mb-6">Црногорски рјечник</h1>
+      <h1 className="text-3xl font-bold mb-6">Crnogorski rječnik</h1>
 
       <input
         type="text"
-        placeholder="Cerca parola o cirillico..."
+        placeholder="Претрага..."
         className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
         value={query}
         onChange={(e) => {
