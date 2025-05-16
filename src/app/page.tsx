@@ -34,8 +34,8 @@ export default function Page() {
     const queryLowercase = query.toLowerCase();
 
     // Cerca la query *dentro* la parola o la traslitterazione
-    return wordLowercase.includes(queryLowercase) || cyrillicLowercase.includes(queryLowercase);
-  }) || [];
+    return wordLowercase.startsWith(queryLowercase) || cyrillicLowercase.startsWith(queryLowercase);
+  }).slice(0, 5) || [];
 
 
 
@@ -49,8 +49,18 @@ export default function Page() {
   return (
     
     <main className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Црногорски рјечник</h1>
+      {/*<h1 className="text-3xl font-bold mb-6">Црногорски рјечник</h1>
       <h1 className="text-3xl font-bold mb-6">Crnogorski rječnik</h1>
+          */}
+
+        <Image 
+         src={"/images/logo.png"}
+         width={800}
+         height={300}
+         alt='Logo'
+        className='hover:cursor-pointer'
+         />
+
 
       <input
         type="text"
@@ -91,14 +101,14 @@ export default function Page() {
       {filtered.length === 0 ? (
         <p className="text-gray-500">Nessun risultato trovato.</p>
       ) : (
-        <ul className="space-y-6">
+        <ul className="space-y-6 ">
           {filtered.map((entry, idx) => (
             <li key={idx} className="border border-gray-200 rounded-xl p-4 shadow-sm hover:cursor-pointer" onClick={() => {
               //window.location.href = `/detail/${entry.id}`;
               router.push(`/detail/${entry.id}`);
             }} >
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-semibold">
+                <h2 className="text-xl font-semibold hover:cursor-pointer">
                   {entry.word} / {entry.cyrillic}
                 </h2>
 
