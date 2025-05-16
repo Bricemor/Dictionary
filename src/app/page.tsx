@@ -4,6 +4,7 @@ import { useState } from 'react'; import Image from "next/image";
 
 import dictionaryData from '@/data/dictionary.json';
 import { useRouter } from 'next/navigation';
+import {prisma} from '@/lib/prisma';
 type WordType = 'glagol' | 'imenica' | 'prijedlog';
 type Gender = 'm.r.' | 'ž.r.' | null;
 
@@ -20,7 +21,7 @@ interface DictionaryEntry {
 
 
 
-export default function Page() {
+export default async function Page() {
   const [query, setQuery] = useState('');
   // const [filtered, setFiltered] = useState<DictionaryEntry[]>([]);
   const router = useRouter();
@@ -41,7 +42,9 @@ export default function Page() {
 
 
 
+  const recordFromDb = await prisma.dictionary.findFirst();
 
+  console.log("recordFromDb", recordFromDb);
 
 
 
