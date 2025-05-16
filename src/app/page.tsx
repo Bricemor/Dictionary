@@ -21,7 +21,7 @@ interface DictionaryEntry {
 
 
 
-export default async function Page() {
+export default function Page() {
   const [query, setQuery] = useState('');
   // const [filtered, setFiltered] = useState<DictionaryEntry[]>([]);
   const router = useRouter();
@@ -41,10 +41,6 @@ export default async function Page() {
 
 
 
-
-  const recordFromDb = await prisma.dictionary.findFirst();
-
-  console.log("recordFromDb", recordFromDb);
 
 
 
