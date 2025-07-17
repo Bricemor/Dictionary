@@ -47,87 +47,88 @@ export default function Page() {
 
   return (
     
-    <main className="p-8 max-w-4xl mx-auto">
-      {/*<h1 className="text-3xl font-bold mb-6">Црногорски рјечник</h1>
-      <h1 className="text-3xl font-bold mb-6">Crnogorski rječnik</h1>
-          */}
+    <><div className="text-sm">
+      <a href="/bonus" className="font-semibold text-indigo-600 hover:text-indigo-500">
+        Projekat/Пројекат
+      </a>
+    
+    </div><main className="p-8 max-w-4xl mx-auto">
+        {/*<h1 className="text-3xl font-bold mb-6">Црногорски рјечник</h1>
+    <h1 className="text-3xl font-bold mb-6">Crnogorski rječnik</h1>
+        */}
 
-        <Image 
-         src={"/images/logo.png"}
-         width={800}
-         height={300}
-         alt='Logo'
-        className='hover:cursor-pointer'
-         />
-
-
-      <input
-        type="text"
-        placeholder="Претрага..."
-        className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        value={query}
-        onChange={(e) => {
-          setQuery(e.target.value)
-        }}
-
-      />
-
-      {/*
-      
-      <input
-        type='button'
-        value='Cerca'
-        className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        onClick={() => {
-          setFiltered(dictionaryData.filter(entry => {
-            const wordLowercase = entry.word.toLowerCase();
-            const cyrillicLowercase = entry.cyrillic.toLowerCase();
-            const queryLowercase = query.toLowerCase();
+        <Image
+          src={"/images/logo.png"}
+          width={800}
+          height={300}
+          alt='Logo'
+          className='hover:cursor-pointer' />
 
 
-            return queryLowercase.includes(wordLowercase) || queryLowercase.includes(cyrillicLowercase);
-          }) || []);
+        <input
+          type="text"
+          placeholder="Претрага..."
+          className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          } } />
 
-        }}
-      />
-      
-      */}
-
-
-
-
-
-      {filtered.length === 0 ? (
-        <p className="text-gray-500">Nessun risultato trovato.</p>
-      ) : (
-        <ul className="space-y-6 ">
-          {filtered.map((entry, idx) => (
-            <li key={idx} className="border border-gray-200 rounded-xl p-4 shadow-sm hover:cursor-pointer" onClick={() => {
-              //window.location.href = `/detail/${entry.id}`;
-              router.push(`/detail/${entry.id}`);
-            }} >
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-semibold hover:cursor-pointer">
-                  {entry.word} / {entry.cyrillic}
-                </h2>
-
-              </div>
-
-            </li>
-          ))}
-        </ul>
-      )}
+        {/*
+    
+    <input
+      type='button'
+      value='Cerca'
+      className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      onClick={() => {
+        setFiltered(dictionaryData.filter(entry => {
+          const wordLowercase = entry.word.toLowerCase();
+          const cyrillicLowercase = entry.cyrillic.toLowerCase();
+          const queryLowercase = query.toLowerCase();
 
 
-      <input
-        type='button'
-        value='Login'
-        className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-amber-400"
-        onClick={() => {
-          //window.location.href = '/login';
-          router.push('/login');
-        }}
-      />
-    </main>
+          return queryLowercase.includes(wordLowercase) || queryLowercase.includes(cyrillicLowercase);
+        }) || []);
+
+      }}
+    />
+    
+    */}
+
+
+
+
+
+        {filtered.length === 0 ? (
+          <p className="text-gray-500">Nessun risultato trovato.</p>
+        ) : (
+          <ul className="space-y-6 ">
+            {filtered.map((entry, idx) => (
+              <li key={idx} className="border border-gray-200 rounded-xl p-4 shadow-sm hover:cursor-pointer" onClick={() => {
+                //window.location.href = `/detail/${entry.id}`;
+                router.push(`/detail/${entry.id}`);
+              } }>
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-semibold hover:cursor-pointer">
+                    {entry.word} / {entry.cyrillic}
+                  </h2>
+
+                </div>
+
+              </li>
+            ))}
+          </ul>
+        )}
+
+
+        <input
+          type='button'
+          value='Login'
+          className="w-full border border-gray-300 rounded-xl px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-amber-400"
+          onClick={() => {
+            //window.location.href = '/login';
+            router.push('/login');
+          } } />
+      </main></>
   );
 }

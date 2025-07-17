@@ -5,11 +5,13 @@ import dictionaryData from '@/data/dictionary.json';
 
 const prisma = new PrismaClient()
 
-const userData: Prisma.DictionaryCreateInput[] = dictionaryData.map(
+const dictionaries: Prisma.DictionaryCreateInput[] = dictionaryData.map(
   ({ id, ...rest }) => rest
 )
 async function main() {
-  for (const data of userData) {
+
+
+  for (const data of dictionaries) {
     await prisma.dictionary.create({ data })
   }
 }
