@@ -124,7 +124,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\brice\\Documents\\GitHub\\Dictionary\\src\\generated\\prisma",
+      "value": "/Users/volodymyrbarabash/code/tutoring/brice-dictionary/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -133,12 +133,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "darwin-arm64",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\brice\\Documents\\GitHub\\Dictionary\\prisma\\schema.prisma",
+    "sourceFilePath": "/Users/volodymyrbarabash/code/tutoring/brice-dictionary/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -152,6 +152,7 @@ const config = {
     "db"
   ],
   "activeProvider": "sqlite",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
