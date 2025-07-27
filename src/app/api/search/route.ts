@@ -18,8 +18,18 @@ export async function GET(request: Request) {
         { cyrillic: { startsWith: query } },
       ],
     },
-    take: 5,
+    orderBy: {
+      word: "asc",
+    },
+    take: 20,
   });
+
+  // Sort by shortest word first
+  const sorted = results
+    .sort((a: any, b: any) => a.word.length - b.word.length)
+    .slice(0, 5);
+
+  return NextResponse.json(sorted);
 
   return NextResponse.json(results);
 }
