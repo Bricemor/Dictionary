@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get("q") || "";
 
-  if (query.length < 3) {
+  if (query.length < 1) {
     return NextResponse.json([]);
   }
 
@@ -21,7 +21,7 @@ export async function GET(request: Request) {
     orderBy: {
       word: "asc",
     },
-    take: 20,
+  
   });
 
   // Sort by shortest word first
@@ -31,5 +31,5 @@ export async function GET(request: Request) {
 
   return NextResponse.json(sorted);
 
-  return NextResponse.json(results);
+
 }

@@ -28,7 +28,7 @@ export default function Page() {
 
   // Fetch from API when query changes
   React.useEffect(() => {
-    if (query.length < 3) {
+    if (query.length < 1) {
       setFiltered([]);
       return;
     }
