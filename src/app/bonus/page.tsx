@@ -98,7 +98,7 @@ function FourthTabContent() {
   return <div>Here’s the <strong>Fourth</strong> tab content.</div>
 }
 
-export default function BonusPage({ params }: { params: { id: string } }) {
+export default function BonusPage() {
   const [activeTab, setActiveTab] = useState('first')
   const router = useRouter()
   

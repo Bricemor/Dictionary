@@ -14,7 +14,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body className="antialiased">
+  {/* Banner Ad at the top */}
+  <div className="w-full bg-gray-100 text-center py-2">
+    <a
+      href="https://example.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://via.placeholder.com/728x90.png?text=Banner+Ad"
+        alt="Banner Ad"
+        className="mx-auto"
+      />
+    </a>
+  </div>
+
+  {children}
+</body>
     </html>
   );
 }
